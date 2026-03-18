@@ -9,8 +9,8 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>GreenBelt | Sustainable Development & Afforestation Uganda</title>
-        <meta name="description" content="GreenBelt Afforestation Initiative Uganda - Empowering communities through sustainable development, health, and environmental restoration." />
+        <title>GreenBelt | Empowerment Hub Sustainable Development</title>
+        <meta name="description" content="GreenBelt Empowerment Hub - Empowering communities through sustainable development, health, and environmental restoration." />
       </Helmet>
       <Hero />
       <About />

@@ -23,13 +23,13 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
+    <nav className={`navbar ${isScrolled ? 'scrolled' : 'at-top'}`}>
       <div className="container nav-content">
         <Link to="/" className="logo">
-          <Leaf className="logo-icon" size={32} />
+          <img src="/src/assets/logo.jpeg" alt="GreenBelt" className="logo-img" />
           <div className="logo-text">
             <span className="brand-name">GreenBelt</span>
-            <span className="brand-sub">Afforestation Initiative</span>
+            <span className="brand-sub">Empowerment Hub</span>
           </div>
         </Link>
 
@@ -44,13 +44,16 @@ const Navbar = () => {
               {link.name}
             </NavLink>
           ))}
-          <button className="btn btn-primary">Donate Now</button>
+          <button className={`btn ${isScrolled ? 'btn-primary' : 'btn-white'}`}>Donate Now</button>
         </div>
 
         {/* Mobile Toggle */}
-        <button className="mobile-toggle" onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
+        <div className="mobile-actions">
+          <span className="menu-label">MENU</span>
+          <button className="mobile-toggle" onClick={() => setIsOpen(!isOpen)}>
+            {isOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
@@ -94,15 +97,20 @@ const Navbar = () => {
           align-items: center;
         }
 
+        .navbar.at-top .logo { color: var(--white); }
+        .navbar.scrolled .logo { color: var(--primary); }
+
         .logo {
           display: flex;
           align-items: center;
           gap: 0.8rem;
-          color: var(--primary);
         }
 
-        .logo-icon {
-          color: var(--primary);
+        .logo-img {
+          width: 45px;
+          height: 45px;
+          object-fit: cover;
+          border-radius: 10px;
         }
 
         .logo-text {
@@ -114,14 +122,16 @@ const Navbar = () => {
         .brand-name {
           font-size: 1.5rem;
           font-weight: 700;
-          color: var(--primary);
+          color: inherit;
         }
+
+        .navbar.at-top .brand-sub { color: rgba(255, 255, 255, 0.8); }
+        .navbar.scrolled .brand-sub { color: var(--gray-800); }
 
         .brand-sub {
           font-size: 0.7rem;
           text-transform: uppercase;
           letter-spacing: 1px;
-          color: var(--gray-800);
         }
 
         .nav-links {
@@ -130,10 +140,22 @@ const Navbar = () => {
           gap: 2.5rem;
         }
 
+        .navbar.at-top .nav-link { color: var(--white); }
+        .navbar.scrolled .nav-link { color: var(--black); }
+
         .nav-link {
           font-weight: 600;
-          color: var(--black);
           position: relative;
+        }
+        
+        .btn-white {
+          background-color: var(--white);
+          color: var(--primary);
+        }
+        
+        .btn-white:hover {
+          background-color: var(--accent);
+          transform: translateY(-2px);
         }
 
         .nav-link::after {
@@ -150,20 +172,44 @@ const Navbar = () => {
         .nav-link.active {
           color: var(--primary);
         }
+        
+        .navbar.at-top .nav-link.active {
+          color: var(--accent);
+        }
+
+        .navbar.at-top .nav-link.active::after {
+          background-color: var(--accent);
+        }
 
         .nav-link.active::after {
           width: 100%;
         }
 
-        .navbar.scrolled .nav-link {
-          color: var(--black);
+        .mobile-actions {
+          display: none;
+          align-items: center;
+          gap: 0.8rem;
+        }
+
+        .navbar.at-top .menu-label,
+        .navbar.at-top .mobile-toggle {
+          color: var(--white);
+        }
+
+        .navbar.scrolled .menu-label,
+        .navbar.scrolled .mobile-toggle {
+          color: var(--primary);
+        }
+
+        .menu-label {
+          font-size: 0.8rem;
+          font-weight: 700;
+          letter-spacing: 1px;
         }
 
         .mobile-toggle {
-          display: none;
           background: none;
           border: none;
-          color: var(--primary);
           cursor: pointer;
         }
 
@@ -203,8 +249,8 @@ const Navbar = () => {
             display: none;
           }
           
-          .mobile-toggle {
-            display: block;
+          .mobile-actions {
+            display: flex;
           }
 
           .mobile-menu {

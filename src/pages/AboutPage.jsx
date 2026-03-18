@@ -21,7 +21,7 @@ const AboutPage = () => {
           >
             About GreenBelt
           </motion.h1>
-          <p>Rooted in Uganda, growing for the future.</p>
+          <p>Empowerment Hub</p>
         </div>
       </section>
 
@@ -50,7 +50,7 @@ const AboutPage = () => {
             >
               <h2 className="text-primary">Our Vision</h2>
               <p>
-                A resilient and prosperous Uganda where every community enjoys 
+                A resilient and prosperous world where every community enjoys 
                 sustainable livelihoods, healthy environments, and full social inclusion.
               </p>
             </motion.div>
@@ -65,7 +65,7 @@ const AboutPage = () => {
             <div className="about-text">
               <h2>Our Comprehensive <span className="text-primary">Development Model</span></h2>
               <p>
-                GreenBelt Afforestation Initiative Uganda Limited is designed as a multi-sector 
+                GreenBelt Empowerment Hub is designed as a multi-sector 
                 community development organization. Unlike traditional NGOs that focus on 
                 a single issue, our structure integrates economic empowerment, health, 
                 protection, education, advocacy, and disaster resilience into one unified 
@@ -78,7 +78,7 @@ const AboutPage = () => {
               </p>
             </div>
             <div className="about-img-group">
-              <img src={locationImg} alt="Projects in Uganda" className="img-rounded" />
+              <img src={locationImg} alt="Mission in action" className="img-rounded" />
             </div>
           </div>
         </div>

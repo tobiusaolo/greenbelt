@@ -9,14 +9,14 @@ const Footer = () => {
         <div className="footer-grid">
           <div className="footer-info">
             <Link to="/" className="logo" style={{ marginBottom: '1.5rem', display: 'flex' }}>
-              <Leaf className="logo-icon" size={32} />
+              <img src="/src/assets/logo.jpeg" alt="GreenBelt" className="footer-logo-img" />
               <div className="logo-text">
                 <span className="brand-name">GreenBelt</span>
-                <span className="brand-sub">Afforestation Initiative</span>
+                <span className="brand-sub">Empowerment Hub</span>
               </div>
             </Link>
             <p className="footer-desc">
-              Dedicated to poverty reduction, human rights, and sustainable development in Uganda. 
+              Dedicated to poverty reduction, human rights, and sustainable development. 
               Join us in our mission to create a greener, more equitable future.
             </p>
             <div className="social-links">
@@ -53,7 +53,7 @@ const Footer = () => {
             <h3>Contact Us</h3>
             <div className="contact-item">
               <MapPin className="contact-icon" size={20} />
-              <span>Plot 922536, Kisaasi-kyanja road, P.O Box Kampala, Uganda</span>
+              <span>Plot 922536, Kisaasi-kyanja road, P.O Box Kampala</span>
             </div>
             <div className="contact-item">
               <Phone className="contact-icon" size={20} />
@@ -61,7 +61,7 @@ const Footer = () => {
             </div>
             <div className="contact-item">
               <Mail className="contact-icon" size={20} />
-              <span>greenbeltug@gmail.com</span>
+              <span>empowerhub@gmail.com</span>
             </div>
           </div>
         </div>
@@ -69,7 +69,7 @@ const Footer = () => {
       
       <div className="footer-bottom">
         <div className="container">
-          <p>&copy; {new Date().getFullYear()} Green Belt Afforestation Initiative Uganda Limited. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Empowerment Hub Afforestation Initiative Limited. All rights reserved.</p>
         </div>
       </div>
 
@@ -171,6 +171,13 @@ const Footer = () => {
           align-items: center;
           gap: 0.8rem;
           color: var(--primary);
+        }
+
+        .footer-logo-img {
+          width: 40px;
+          height: 40px;
+          object-fit: cover;
+          border-radius: 8px;
         }
 
         .logo-text {

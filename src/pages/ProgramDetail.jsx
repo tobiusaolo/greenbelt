@@ -18,7 +18,7 @@ const programData = {
   env: { 
     title: 'Environmental Restoration', 
     img: treeImg2, 
-    desc: 'The core of our mission: large-scale afforestation across Uganda. We manage community nurseries, distribute seedlings, and provide technical training on land restoration and sustainable forest management.' 
+    desc: 'The core of our mission: large-scale afforestation and ecosystem protection. We manage community nurseries, distribute seedlings, and provide technical training on land restoration and sustainable forest management.' 
   },
   adv: { 
     title: 'Advocacy & Rights', 
@@ -74,7 +74,7 @@ const ProgramDetail = () => {
               <p>
                 Our multi-sectoral approach ensures that {program.title.toLowerCase()} is 
                 not just a standalone project, but a part of a larger, integrated 
-                strategy for sustainable development in Uganda. We prioritize local 
+                strategy for sustainable development. We prioritize local 
                 leadership and community ownership in every step.
               </p>
               

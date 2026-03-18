@@ -31,7 +31,7 @@ const GalleryPage = () => {
           >
             Impact Gallery
           </motion.h1>
-          <p className="text-center">Visualizing our footprint across Uganda.</p>
+          <p className="text-center">Visualizing our footprint across the communities we serve.</p>
         </div>
       </section>
 

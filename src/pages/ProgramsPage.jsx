@@ -12,7 +12,7 @@ import treeImg3 from '../assets/WhatsApp Image 2026-03-12 at 14.21.58.jpeg';
 const programs = [
   { id: 'health', title: 'Health Department', img: healthImg, cat: 'Medical', desc: 'Promoting health and well-being through community outreach and specialized services.' },
   { id: 'env', title: 'Environmental Restoration', img: treeImg2, cat: 'Sustain', desc: 'Comprehensive afforestation and land restoration initiatives to combat climate change.' },
-  { id: 'adv', title: 'Advocacy & Rights', img: advocacyImg, cat: 'Social', desc: 'Championing human rights and social inclusion for vulnerable communities in Uganda.' },
+  { id: 'adv', title: 'Advocacy & Rights', img: advocacyImg, cat: 'Social', desc: 'Championing human rights and social inclusion for vulnerable communities.' },
   { id: 'econ', title: 'Economic Empowerment', img: sustainableImg, cat: 'Growth', desc: 'Creating opportunities for sustainable livelihoods and poverty reduction.' },
   { id: 'edu', title: 'Education Support', img: treeImg1, cat: 'Learning', desc: 'Integrating education as a pillar for long-term community development.' },
   { id: 'res', title: 'Disaster Resilience', img: treeImg3, cat: 'Safety', desc: 'Building community capacity to withstand and recover from environmental disasters.' },

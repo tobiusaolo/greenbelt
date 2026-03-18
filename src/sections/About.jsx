@@ -13,7 +13,7 @@ const About = () => {
     },
     {
       title: "Advocacy & Rights",
-      desc: "Championing human rights and social inclusion for vulnerable communities in Uganda.",
+      desc: "Championing human rights and social inclusion for vulnerable communities.",
       icon: <Shield size={24} />,
       color: "#457b9d"
     },
@@ -57,7 +57,7 @@ const About = () => {
             <span className="section-tag">Who We Are</span>
             <h2>Unified for <br /> <span className="text-primary">Sustainable Growth</span></h2>
             <p>
-              Green Belt Afforestation Initiative is a multi-sector community development organization 
+              GreenBelt Empowerment Hub is a multi-sector community development organization 
               focused on poverty reduction and human rights. We integrate economic empowerment, 
               health, protection, and advocacy into one comprehensive framework.
             </p>

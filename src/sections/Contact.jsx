@@ -17,7 +17,7 @@ const Contact = () => {
             <h2>Let's Build a <br /> <span className="text-primary">Greener Future</span></h2>
             <p>
               Have questions about our programs or want to partner with us? 
-              Reach out to our team in Kampala.
+              Reach out to our team.
             </p>
 
             <div className="contact-details">
@@ -25,7 +25,7 @@ const Contact = () => {
                 <div className="icon-box"><MapPin size={24} /></div>
                 <div>
                   <h4>Visit Us</h4>
-                  <p>Plot 922536, Kisaasi-kyanja road, P.O Box Kampala, Uganda</p>
+                  <p>Plot 922536, Kisaasi-kyanja road, P.O Box Kampala</p>
                 </div>
               </div>
 
@@ -41,7 +41,7 @@ const Contact = () => {
                 <div className="icon-box"><Mail size={24} /></div>
                 <div>
                   <h4>Email Us</h4>
-                  <p>greenbeltug@gmail.com</p>
+                  <p>empowerhub@gmail.com</p>
                 </div>
               </div>
             </div>
@@ -56,11 +56,11 @@ const Contact = () => {
             <form className="contact-form">
               <div className="form-group">
                 <label>Full Name</label>
-                <input type="text" placeholder="John Doe" />
+                <input type="text" placeholder="Kito Everest" />
               </div>
               <div className="form-group">
                 <label>Email Address</label>
-                <input type="email" placeholder="john@example.com" />
+                <input type="email" placeholder="kito.everest@example.com" />
               </div>
               <div className="form-group">
                 <label>Message</label>
