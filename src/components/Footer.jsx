@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Youtube, Leaf } from 'lucide-react';
+import logoImg from '../assets/logo.jpeg';
 
 const Footer = () => {
   return (
@@ -9,7 +10,7 @@ const Footer = () => {
         <div className="footer-grid">
           <div className="footer-info">
             <Link to="/" className="logo" style={{ marginBottom: '1.5rem', display: 'flex' }}>
-              <img src="/src/assets/logo.jpeg" alt="GreenBelt" className="footer-logo-img" />
+              <img src={logoImg} alt="GreenBelt" className="footer-logo-img" />
               <div className="logo-text">
                 <span className="brand-name">GreenBelt</span>
                 <span className="brand-sub">Empowerment Hub</span>

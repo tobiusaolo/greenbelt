@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import { Menu, X, Leaf } from 'lucide-react';
+import logoImg from '../assets/logo.jpeg';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,7 +32,7 @@ const Navbar = () => {
     <nav className={`navbar ${isScrolled ? 'scrolled' : (isLightPage ? 'at-top light' : 'at-top')}`}>
       <div className="container nav-content">
         <Link to="/" className="logo">
-          <img src="/src/assets/logo.jpeg" alt="GreenBelt" className="logo-img" />
+          <img src={logoImg} alt="GreenBelt" className="logo-img" />
           <div className="logo-text">
             <span className="brand-name">GreenBelt</span>
             <span className="brand-sub">Empowerment Hub</span>
