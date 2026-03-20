@@ -1,19 +1,25 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import sustainableImg from '../assets/ngo_sustainable_farming_uganda_1773776205462.png';
-import healthImg from '../assets/ngo_health_outreach_uganda_1773776224094.png';
-import advocacyImg from '../assets/ngo_advocacy_meeting_uganda_1773776560989.png';
-import treeImg1 from '../assets/WhatsApp Image 2026-03-12 at 14.21.57.jpeg';
-import treeImg2 from '../assets/WhatsApp Image 2026-03-12 at 14.21.57 (1).jpeg';
+import img1 from '../assets/gallery/WhatsApp Image 2026-03-19 at 11.29.15 (1).jpeg';
+import img2 from '../assets/gallery/WhatsApp Image 2026-03-19 at 11.29.15.jpeg';
+import img3 from '../assets/gallery/WhatsApp Image 2026-03-19 at 11.29.16 (1).jpeg';
+import img4 from '../assets/gallery/WhatsApp Image 2026-03-19 at 11.29.16.jpeg';
+import img5 from '../assets/gallery/WhatsApp Image 2026-03-19 at 11.30.34.jpeg';
+import img6 from '../assets/gallery/WhatsApp Image 2026-03-19 at 17.36.18.jpeg';
+import img7 from '../assets/gallery/WhatsApp Image 2026-03-12 at 14.21.57.jpeg';
+import img8 from '../assets/gallery/WhatsApp Image 2026-03-12 at 14.21.58.jpeg';
 
 const GalleryPage = () => {
   const images = [
-    { src: sustainableImg, title: 'Sustainable Farming' },
-    { src: healthImg, title: 'Health Outreach' },
-    { src: advocacyImg, title: 'Community Advocacy' },
-    { src: treeImg1, title: 'Afforestation Phase 1' },
-    { src: treeImg2, title: 'Project Location' },
+    { src: img1, title: 'Community Support' },
+    { src: img2, title: 'Health Outreach' },
+    { src: img3, title: 'Environmental Restoration' },
+    { src: img4, title: 'Field Training' },
+    { src: img5, title: 'Project Overview' },
+    { src: img6, title: 'Advocacy Meeting' },
+    { src: img7, title: 'Project Focus' },
+    { src: img8, title: 'Ecosystem Protection' },
   ];
 
   return (

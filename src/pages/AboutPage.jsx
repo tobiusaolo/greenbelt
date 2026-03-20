@@ -1,8 +1,8 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import aboutImg from '../assets/WhatsApp Image 2026-03-12 at 14.21.57.jpeg';
-import locationImg from '../assets/WhatsApp Image 2026-03-12 at 14.21.57 (1).jpeg';
+import { Target, Users, Leaf, Scale, Heart, Lightbulb, ShieldCheck } from 'lucide-react';
+import aboutImg from '../assets/gallery/WhatsApp Image 2026-03-19 at 17.36.18.jpeg';
+import locationImg from '../assets/gallery/WhatsApp Image 2026-03-19 at 11.29.15 (1).jpeg';
 
 const AboutPage = () => {
   return (
@@ -25,35 +25,128 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Mission & Vision */}
+      {/* Mission, Vision & Objective */}
       <section className="section-padding">
         <div className="container">
-          <div className="grid-2">
+          <div className="grid-3">
             <motion.div 
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="card-feature"
+              className="card-feature highlight-card"
             >
+              <div className="card-icon"><Target size={32} /></div>
               <h2 className="text-primary">Our Mission</h2>
               <p>
-                To reduce poverty and champion human rights through an integrated, 
-                multi-sector community development framework that restores our environment 
-                and empowers the vulnerable.
+                To empower women, youth, children, people with disabilities, and the elderly by enhancing their access to economic opportunities, improving their health, and providing them with the knowledge, skills, and support they need to overcome challenges and take responsibility for their own futures.
               </p>
             </motion.div>
             <motion.div 
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="card-feature"
+              transition={{ delay: 0.1 }}
+              className="card-feature highlight-card"
             >
+              <div className="card-icon"><Lightbulb size={32} /></div>
               <h2 className="text-primary">Our Vision</h2>
               <p>
-                A resilient and prosperous world where every community enjoys 
-                sustainable livelihoods, healthy environments, and full social inclusion.
+                We envision a world where women, youth, children, people with disabilities, and the elderly are empowered, responsible, and resilient.
               </p>
             </motion.div>
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="card-feature highlight-card"
+            >
+              <div className="card-icon"><ShieldCheck size={32} /></div>
+              <h2 className="text-primary">Our Objective</h2>
+              <p>
+                To create holistic and sustainable solutions that empower marginalized groups to take control of their futures and contribute positively to their communities.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Goal & Commitment */}
+      <section className="section-padding bg-light">
+        <div className="container">
+          <div className="goal-section">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              className="goal-content"
+            >
+              <h2 className="text-center mb-4">Our <span className="text-primary">Ultimate Goal</span></h2>
+              <p className="lead-text text-center">
+                Our goal is to create inclusive communities where everyone, regardless of their gender, age, or ability, can access economic opportunities, healthcare, and education, and can live free from the fear of violence and discrimination. 
+              </p>
+              <p className="text-center mt-3">
+                We work to foster a mindset shift that promotes personal responsibility, self-reliance, and a sense of ownership in building resilient families and communities. We are committed to child protection, ending domestic violence, and fostering mindset change across communities, so that people not only survive but thrive.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Core Values */}
+      <section className="section-padding">
+        <div className="container">
+          <div className="section-title text-center">
+            <span className="section-tag">Guiding Principles</span>
+            <h2>Our Core <span className="text-primary">Values</span></h2>
+          </div>
+          
+          <div className="values-grid">
+            {[
+              {
+                title: "Impact",
+                desc: "We are driven by the tangible difference we make. We focus on measurable results that transform lives and restore hope in the communities we serve.",
+                icon: <Target className="value-icon" />
+              },
+              {
+                title: "Collaboration",
+                desc: "We believe that partnerships are essential for sustainable change. We actively build relationships with local communities, governments, and partners to leverage resources and create collective impact.",
+                icon: <Users className="value-icon" />
+              },
+              {
+                title: "Sustainability",
+                desc: "We create long-term solutions that promote economic, social, and environmental resilience, ensuring communities can adapt to and withstand future crises.",
+                icon: <Leaf className="value-icon" />
+              },
+              {
+                title: "Social Justice",
+                desc: "We advance equality by challenging discrimination and advocating for the rights of marginalized groups, including gender equality and disability inclusion.",
+                icon: <Scale className="value-icon" />
+              },
+              {
+                title: "Compassion",
+                desc: "We approach our work with empathy, ensuring that those we serve feel valued, heard, and encouraged on their journey toward empowerment.",
+                icon: <Heart className="value-icon" />
+              },
+              {
+                title: "Innovation",
+                desc: "We embrace creativity in addressing complex challenges, fostering a culture of continuous learning to find effective ways to meet evolving community needs.",
+                icon: <Lightbulb className="value-icon" />
+              }
+            ].map((value, index) => (
+              <motion.div 
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="value-card"
+              >
+                <div className="value-icon-wrapper">{value.icon}</div>
+                <h3>{value.title}</h3>
+                <p>{value.desc}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -104,19 +197,78 @@ const AboutPage = () => {
         .page-header .container { z-index: 1; }
         .page-header h1 { font-size: 3.5rem; margin-bottom: 1rem; }
         
-        .grid-2 {
+        .grid-3 {
           display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 3rem;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 2rem;
         }
-        .card-feature {
-          padding: 3rem;
+        .highlight-card {
+          padding: 2.5rem;
           background: white;
           border-radius: 20px;
           box-shadow: var(--shadow);
-          border-left: 5px solid var(--primary);
+          border-top: 5px solid var(--primary);
+          text-align: center;
+          transition: transform 0.3s ease;
         }
-        .card-feature h2 { margin-bottom: 1.5rem; }
+        .highlight-card:hover { transform: translateY(-10px); }
+        .card-icon {
+          width: 60px;
+          height: 60px;
+          background: var(--primary-light);
+          color: var(--primary);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0 auto 1.5rem;
+        }
+        .highlight-card h2 { font-size: 1.5rem; margin-bottom: 1rem; }
+        .highlight-card p { font-size: 0.95rem; line-height: 1.6; color: var(--gray-700); }
+
+        .goal-section {
+          max-width: 900px;
+          margin: 0 auto;
+        }
+        .lead-text {
+          font-size: 1.25rem;
+          font-weight: 500;
+          color: var(--gray-900);
+          line-height: 1.8;
+        }
+
+        .section-tag {
+          color: var(--primary);
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          font-weight: 700;
+          display: block;
+          margin-bottom: 0.5rem;
+        }
+        .values-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 2rem;
+          margin-top: 4rem;
+        }
+        .value-card {
+          background: white;
+          padding: 2rem;
+          border-radius: 20px;
+          box-shadow: var(--shadow);
+          border: 1px solid rgba(0,0,0,0.05);
+          transition: all 0.3s ease;
+        }
+        .value-card:hover {
+          box-shadow: var(--shadow-lg);
+          border-color: var(--primary);
+        }
+        .value-icon-wrapper {
+          color: var(--primary);
+          margin-bottom: 1.5rem;
+        }
+        .value-card h3 { margin-bottom: 1rem; color: var(--primary); }
+        .value-card p { font-size: 0.9rem; color: var(--gray-600); line-height: 1.6; }
 
         .about-detailed {
           display: grid;
@@ -129,8 +281,12 @@ const AboutPage = () => {
           box-shadow: var(--shadow-lg);
         }
 
+        @media (max-width: 1024px) {
+          .grid-3, .values-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
         @media (max-width: 768px) {
-          .grid-2, .about-detailed { grid-template-columns: 1fr; }
+          .grid-3, .values-grid, .about-detailed { grid-template-columns: 1fr; }
           .page-header h1 { font-size: 2.5rem; }
         }
       `}</style>

@@ -2,12 +2,12 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import sustainableImg from '../assets/ngo_sustainable_farming_uganda_1773776205462.png';
-import healthImg from '../assets/ngo_health_outreach_uganda_1773776224094.png';
-import advocacyImg from '../assets/ngo_advocacy_meeting_uganda_1773776560989.png';
-import treeImg1 from '../assets/WhatsApp Image 2026-03-12 at 14.21.57.jpeg';
-import treeImg2 from '../assets/WhatsApp Image 2026-03-12 at 14.21.57 (1).jpeg';
-import treeImg3 from '../assets/WhatsApp Image 2026-03-12 at 14.21.58.jpeg';
+import healthImg from '../assets/gallery/WhatsApp Image 2026-03-19 at 17.36.18.jpeg';
+import envImg from '../assets/gallery/WhatsApp Image 2026-03-19 at 11.29.15 (1).jpeg';
+import advocacyImg from '../assets/gallery/WhatsApp Image 2026-03-19 at 11.30.34.jpeg';
+import econImg from '../assets/gallery/WhatsApp Image 2026-03-19 at 11.29.16 (1).jpeg';
+import eduImg from '../assets/gallery/WhatsApp Image 2026-03-19 at 11.29.16.jpeg';
+import resilienceImg from '../assets/gallery/WhatsApp Image 2026-03-19 at 11.29.15.jpeg';
 
 const programData = {
   health: { 
@@ -17,7 +17,7 @@ const programData = {
   },
   env: { 
     title: 'Environmental Restoration', 
-    img: treeImg2, 
+    img: envImg, 
     desc: 'The core of our mission: large-scale afforestation and ecosystem protection. We manage community nurseries, distribute seedlings, and provide technical training on land restoration and sustainable forest management.' 
   },
   adv: { 
@@ -27,17 +27,17 @@ const programData = {
   },
   econ: { 
     title: 'Economic Empowerment', 
-    img: sustainableImg, 
+    img: econImg, 
     desc: 'Through micro-finance, vocational training, and cooperative support, we empower community members to build resilient livelihoods and break the cycle of poverty.' 
   },
   edu: { 
     title: 'Education Support', 
-    img: treeImg1, 
+    img: eduImg, 
     desc: 'We believe education is growth. Our programs support school infrastructure, provide learning materials, and advocate for universal access to quality education for every child.' 
   },
   res: { 
     title: 'Disaster Resilience', 
-    img: treeImg3, 
+    img: resilienceImg, 
     desc: 'Equipping communities with the tools and knowledge to anticipate, prepare for, and recover from shocks—including climate -induced disasters and economic stressors.' 
   },
 };

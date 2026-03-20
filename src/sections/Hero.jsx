@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import treeImage from '../assets/WhatsApp Image 2026-03-12 at 14.21.57 (1).jpeg';
+import treeImage from '../assets/gallery/WhatsApp Image 2026-03-19 at 11.30.34.jpeg';
 
 const Hero = () => {
   return (

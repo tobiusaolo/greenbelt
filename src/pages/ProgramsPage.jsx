@@ -2,20 +2,20 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import sustainableImg from '../assets/ngo_sustainable_farming_uganda_1773776205462.png';
-import healthImg from '../assets/ngo_health_outreach_uganda_1773776224094.png';
-import advocacyImg from '../assets/ngo_advocacy_meeting_uganda_1773776560989.png';
-import treeImg1 from '../assets/WhatsApp Image 2026-03-12 at 14.21.57.jpeg';
-import treeImg2 from '../assets/WhatsApp Image 2026-03-12 at 14.21.57 (1).jpeg';
-import treeImg3 from '../assets/WhatsApp Image 2026-03-12 at 14.21.58.jpeg';
+import healthImg from '../assets/gallery/WhatsApp Image 2026-03-19 at 17.36.18.jpeg';
+import envImg from '../assets/gallery/WhatsApp Image 2026-03-19 at 11.29.15 (1).jpeg';
+import advocacyImg from '../assets/gallery/WhatsApp Image 2026-03-19 at 11.30.34.jpeg';
+import econImg from '../assets/gallery/WhatsApp Image 2026-03-19 at 11.29.16 (1).jpeg';
+import eduImg from '../assets/gallery/WhatsApp Image 2026-03-19 at 11.29.16.jpeg';
+import resilienceImg from '../assets/gallery/WhatsApp Image 2026-03-19 at 11.29.15.jpeg';
 
 const programs = [
   { id: 'health', title: 'Health Department', img: healthImg, cat: 'Medical', desc: 'Promoting health and well-being through community outreach and specialized services.' },
-  { id: 'env', title: 'Environmental Restoration', img: treeImg2, cat: 'Sustain', desc: 'Comprehensive afforestation and land restoration initiatives to combat climate change.' },
+  { id: 'env', title: 'Environmental Restoration', img: envImg, cat: 'Sustain', desc: 'Comprehensive afforestation and land restoration initiatives to combat climate change.' },
   { id: 'adv', title: 'Advocacy & Rights', img: advocacyImg, cat: 'Social', desc: 'Championing human rights and social inclusion for vulnerable communities.' },
-  { id: 'econ', title: 'Economic Empowerment', img: sustainableImg, cat: 'Growth', desc: 'Creating opportunities for sustainable livelihoods and poverty reduction.' },
-  { id: 'edu', title: 'Education Support', img: treeImg1, cat: 'Learning', desc: 'Integrating education as a pillar for long-term community development.' },
-  { id: 'res', title: 'Disaster Resilience', img: treeImg3, cat: 'Safety', desc: 'Building community capacity to withstand and recover from environmental disasters.' },
+  { id: 'econ', title: 'Economic Empowerment', img: econImg, cat: 'Growth', desc: 'Creating opportunities for sustainable livelihoods and poverty reduction.' },
+  { id: 'edu', title: 'Education Support', img: eduImg, cat: 'Learning', desc: 'Integrating education as a pillar for long-term community development.' },
+  { id: 'res', title: 'Disaster Resilience', img: resilienceImg, cat: 'Safety', desc: 'Building community capacity to withstand and recover from environmental disasters.' },
 ];
 
 const ProgramsPage = () => {

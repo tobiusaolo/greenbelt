@@ -33,7 +33,7 @@ const Contact = () => {
                 <div className="icon-box"><Phone size={24} /></div>
                 <div>
                   <h4>Call Us</h4>
-                  <p>0777696389</p>
+                  <p>+256 777696389</p>
                 </div>
               </div>
 

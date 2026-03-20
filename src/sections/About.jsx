@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Heart, Shield, Users, BookOpen } from 'lucide-react';
-import aboutImage from '../assets/WhatsApp Image 2026-03-12 at 14.21.57.jpeg';
+import aboutImage from '../assets/gallery/WhatsApp Image 2026-03-19 at 11.29.16.jpeg';
 
 const About = () => {
   const departments = [
@@ -57,9 +57,10 @@ const About = () => {
             <span className="section-tag">Who We Are</span>
             <h2>Unified for <br /> <span className="text-primary">Sustainable Growth</span></h2>
             <p>
-              GreenBelt Empowerment Hub is a multi-sector community development organization 
-              focused on poverty reduction and human rights. We integrate economic empowerment, 
-              health, protection, and advocacy into one comprehensive framework.
+              GreenBelt Empowerment Hub is dedicated to empowering women, youth, children, 
+              people with disabilities, and the elderly. We enhance access to economic 
+              opportunities, improve health, and provide the essential support needed 
+               to overcome challenges and build resilient communities.
             </p>
             
             <div className="dept-grid">

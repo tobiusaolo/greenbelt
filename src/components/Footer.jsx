@@ -57,7 +57,7 @@ const Footer = () => {
             </div>
             <div className="contact-item">
               <Phone className="contact-icon" size={20} />
-              <span>0777696389</span>
+              <span>+256 777696389</span>
             </div>
             <div className="contact-item">
               <Mail className="contact-icon" size={20} />

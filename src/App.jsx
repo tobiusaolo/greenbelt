@@ -8,6 +8,8 @@ import ProgramsPage from './pages/ProgramsPage';
 import ProgramDetail from './pages/ProgramDetail';
 import GalleryPage from './pages/GalleryPage';
 import ContactPage from './pages/ContactPage';
+import TeamPage from './pages/TeamPage';
+import ProjectsPage from './pages/ProjectsPage';
 import { HelmetProvider } from 'react-helmet-async';
 
 function App() {
@@ -23,6 +25,8 @@ function App() {
             <Route path="/programs/:id" element={<ProgramDetail />} />
             <Route path="/gallery" element={<GalleryPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/team" element={<TeamPage />} />
+            <Route path="/projects" element={<ProjectsPage />} />
           </Routes>
         </main>
         <Footer />

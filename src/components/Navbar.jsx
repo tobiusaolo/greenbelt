@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink, Link, useLocation } from 'react-router-dom';
 import { Menu, X, Leaf } from 'lucide-react';
 
 const Navbar = () => {
@@ -14,16 +14,21 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const location = useLocation();
+  const isLightPage = ['/gallery', '/team', '/projects'].includes(location.pathname);
+
   const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'About Us', href: '/about' },
     { name: 'Programs', href: '/programs' },
+    { name: 'Projects', href: '/projects' },
+    { name: 'Team', href: '/team' },
     { name: 'Gallery', href: '/gallery' },
     { name: 'Contact', href: '/contact' },
   ];
 
   return (
-    <nav className={`navbar ${isScrolled ? 'scrolled' : 'at-top'}`}>
+    <nav className={`navbar ${isScrolled ? 'scrolled' : (isLightPage ? 'at-top light' : 'at-top')}`}>
       <div className="container nav-content">
         <Link to="/" className="logo">
           <img src="/src/assets/logo.jpeg" alt="GreenBelt" className="logo-img" />
@@ -44,7 +49,7 @@ const Navbar = () => {
               {link.name}
             </NavLink>
           ))}
-          <button className={`btn ${isScrolled ? 'btn-primary' : 'btn-white'}`}>Donate Now</button>
+          <button className={`btn ${isScrolled ? 'btn-primary' : (isLightPage ? 'btn-primary' : 'btn-white')}`}>Donate Now</button>
         </div>
 
         {/* Mobile Toggle */}
@@ -98,6 +103,7 @@ const Navbar = () => {
         }
 
         .navbar.at-top .logo { color: var(--white); }
+        .navbar.at-top.light .logo { color: var(--primary); }
         .navbar.scrolled .logo { color: var(--primary); }
 
         .logo {
@@ -126,6 +132,7 @@ const Navbar = () => {
         }
 
         .navbar.at-top .brand-sub { color: rgba(255, 255, 255, 0.8); }
+        .navbar.at-top.light .brand-sub { color: var(--gray-600); }
         .navbar.scrolled .brand-sub { color: var(--gray-800); }
 
         .brand-sub {
@@ -141,6 +148,7 @@ const Navbar = () => {
         }
 
         .navbar.at-top .nav-link { color: var(--white); }
+        .navbar.at-top.light .nav-link { color: var(--black); }
         .navbar.scrolled .nav-link { color: var(--black); }
 
         .nav-link {
@@ -176,6 +184,9 @@ const Navbar = () => {
         .navbar.at-top .nav-link.active {
           color: var(--accent);
         }
+        .navbar.at-top.light .nav-link.active {
+          color: var(--primary);
+        }
 
         .navbar.at-top .nav-link.active::after {
           background-color: var(--accent);
@@ -194,6 +205,11 @@ const Navbar = () => {
         .navbar.at-top .menu-label,
         .navbar.at-top .mobile-toggle {
           color: var(--white);
+        }
+
+        .navbar.at-top.light .menu-label,
+        .navbar.at-top.light .mobile-toggle {
+          color: var(--primary);
         }
 
         .navbar.scrolled .menu-label,
@@ -245,6 +261,14 @@ const Navbar = () => {
           background: var(--gray-100);
           padding-left: 1rem;
         }
+        @media (max-width: 1100px) {
+          .nav-links {
+            gap: 1.5rem;
+          }
+          .brand-name { font-size: 1.2rem; }
+        }
+
+        @media (max-width: 900px) {
           .nav-links {
             display: none;
           }
