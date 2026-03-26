@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import sustainableImg from '../assets/ngo_sustainable_farming_uganda_1773776205462.png';
-import healthImg from '../assets/ngo_health_outreach_uganda_1773776224094.png';
-import advocacyImg from '../assets/ngo_advocacy_meeting_uganda_1773776560989.png';
+import sustainableImg from '../assets/WhatsApp Image 2026-03-12 at 14.21.58.jpeg';
+import healthImg from '../assets/gallery/WhatsApp Image 2026-03-19 at 17.36.18.jpeg';
+import advocacyImg from '../assets/gallery/WhatsApp Image 2026-03-19 at 11.30.34.jpeg';
 
 const Departments = () => {
   const programs = [

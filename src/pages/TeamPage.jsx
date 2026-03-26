@@ -4,22 +4,38 @@ import { Helmet } from 'react-helmet-async';
 import { Mail, Linkedin, Twitter } from 'lucide-react';
 import headPrograms from '../assets/team/WhatsApp Image 2026-03-19 at 11.32.26.jpeg';
 import headHealth from '../assets/team/WhatsApp Image 2026-03-19 at 11.57.00.jpeg';
+import fauziaImg from '../assets/team/fauzia.png';
+import saidaImg from '../assets/team/saida.png';
 
 const TeamPage = () => {
   const team = [
     {
-      name: "Binti Majiid",
-      role: "Head of Programs",
-      image: headPrograms,
-      bio: "Leading our strategic initiatives and community programs to ensure sustainable impact across Uganda.",
-      email: "binti@greenbelt.org"
+      name: "Saida Nakaziba",
+      role: "Managing Director",
+      image: saidaImg,
+      bio: "Guiding Green Belt's vision and ensuring comprehensive empowerment for all communities.",
+      email: "saida@greenbelt.org"
     },
     {
-      name: "Dr. Sarah Namasoke",
+      name: "Nanyonga Jackline",
+      role: "Finance and administration",
+      image: headPrograms,
+      bio: "Leading our strategic initiatives and community programs to ensure sustainable impact across Uganda.",
+      email: "jackline@greenbelt.org"
+    },
+    {
+      name: "Faria Majiid Nakaziba",
       role: "Head of Health Department",
       image: headHealth,
       bio: "Overseeing all health-related outreach and specialized medical support services for vulnerable communities.",
-      email: "sarah@greenbelt.org"
+      email: "faria@greenbelt.org"
+    },
+    {
+      name: "Fauzia Ninsiima",
+      role: "Head of Programs",
+      image: fauziaImg,
+      bio: "Coordinating programs and maximizing outreach effectiveness.",
+      email: "fauzia@greenbelt.org"
     }
   ];
 
@@ -108,8 +124,8 @@ const TeamPage = () => {
         }
 
         .team-img-wrapper {
-          width: 160px;
-          height: 160px;
+          width: 190px;
+          height: 190px;
           margin: 0 auto 1.5rem;
           border-radius: 50%;
           overflow: hidden;

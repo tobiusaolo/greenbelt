@@ -9,6 +9,8 @@ import img5 from '../assets/gallery/WhatsApp Image 2026-03-19 at 11.30.34.jpeg';
 import img6 from '../assets/gallery/WhatsApp Image 2026-03-19 at 17.36.18.jpeg';
 import img7 from '../assets/gallery/WhatsApp Image 2026-03-12 at 14.21.57.jpeg';
 import img8 from '../assets/gallery/WhatsApp Image 2026-03-12 at 14.21.58.jpeg';
+import img9 from '../assets/gallery/WhatsApp Image 2026-03-19 at 09.54.27 (1).jpeg';
+import img10 from '../assets/gallery/WhatsApp Image 2026-03-19 at 09.54.27.jpeg';
 
 const GalleryPage = () => {
   const images = [
@@ -20,6 +22,8 @@ const GalleryPage = () => {
     { src: img6, title: 'Advocacy Meeting' },
     { src: img7, title: 'Project Focus' },
     { src: img8, title: 'Ecosystem Protection' },
+    { src: img9, title: 'Community Engagement' },
+    { src: img10, title: 'Team Work' },
   ];
 
   return (
@@ -54,9 +58,6 @@ const GalleryPage = () => {
                 className="gallery-item"
               >
                 <img src={img.src} alt={img.title} />
-                <div className="gallery-hover">
-                  <span>{img.title}</span>
-                </div>
               </motion.div>
             ))}
           </div>
@@ -86,20 +87,6 @@ const GalleryPage = () => {
           transition: var(--transition);
         }
 
-        .gallery-hover {
-          position: absolute;
-          inset: 0;
-          background: rgba(27, 77, 62, 0.8);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          color: white;
-          font-weight: 700;
-          opacity: 0;
-          transition: var(--transition);
-        }
-
-        .gallery-item:hover .gallery-hover { opacity: 1; }
         .gallery-item:hover img { transform: scale(1.05); }
 
         @media (max-width: 991px) { .gallery-masonry { columns: 2; } }

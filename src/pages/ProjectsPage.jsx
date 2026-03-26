@@ -7,63 +7,29 @@ import projectImg from '../assets/gallery/WhatsApp Image 2026-03-19 at 11.30.34.
 const ProjectsPage = () => {
   const activityCategories = [
     {
-      dept: "Health & Wellbeing",
+      dept: "Completed Projects (2025–2026)",
       icon: <Heart />,
-      color: "#e63946",
-      activities: [
-        { title: "Maternal Health Workshops", desc: "Providing prenatal and postnatal care education in rural communities.", status: "Ongoing" },
-        { title: "Mobile Immunization Clinics", desc: "Expanding vaccine access to remote villages to reduce childhood mortality.", status: "Active" },
-        { title: "Nutrition Support Program", desc: "Providing essential nutrition kits and training to vulnerable households.", status: "Strategic" }
-      ]
-    },
-    {
-      dept: "Environmental Restoration",
-      icon: <Leaf />,
       color: "#2d6a4f",
       activities: [
-        { title: "Community Tree Nurseries", desc: "Establishing and managing local nurseries focused on indigenous species.", status: "Active" },
-        { title: "Nationwide Afforestation Drive", desc: "Targeting the restoration of 5,000 hectares of degraded forest land.", status: "Key Project" },
-        { title: "Environmental Education", desc: "Interactive programs in primary schools to foster mindset change early.", status: "Ongoing" }
+        { title: "Elderly Support Program (Busoga, Northern and Central Regions)", desc: "Green Belt successfully implemented an elderly support program in Busoga, Northern, and Central regions of Uganda aimed at improving the welfare and quality of life of older persons through community outreach, care support, and access to essential services.", status: "Completed" },
+        { title: "Medical Camp (Busoga, Northern and Central Regions)", desc: "Green Belt conducted community medical camps in Busoga, Northern, and Central regions in collaboration with medical intern students to provide free health services, basic treatment, and medical awareness to underserved communities, improving access to healthcare and early diagnosis. Also distributed 100 Mamakits to expecting mothers, and provided post birth medication that mothers in rural areas lack.", status: "Completed" }
       ]
     },
     {
-      dept: "Advocacy & Human Rights",
-      icon: <Shield />,
-      color: "#457b9d",
-      activities: [
-        { title: "Child Protection Initiative", desc: "Engaging communities in identifying and preventing child exploitation.", status: "High Priority" },
-        { title: "Domestic Violence Prevention", desc: "Counseling and support systems for survivors and community awareness.", status: "Continuous" },
-        { title: "Legal Awareness Clinics", desc: "Empowering communities with knowledge of their fundamental human rights.", status: "Monthly" }
-      ]
-    },
-    {
-      dept: "Economic Empowerment",
-      icon: <Zap />,
+      dept: "Ongoing Projects",
+      icon: <Leaf />,
       color: "#fdb813",
       activities: [
-        { title: "Vocational Skills Training", desc: "Empowering youth and women with tailoring, crafts, and agricultural skills.", status: "Active" },
-        { title: "Micro-Finance Cooperatives", desc: "Supporting the formation of local savings and credit groups.", status: "Ongoing" },
-        { title: "Market Linkage Program", desc: "Helping rural farmers access better markets for their sustainable produce.", status: "New Launch" }
+        { title: "Tree Planting Initiative", desc: "Green Belt continues to promote environmental conservation through large-scale tree planting activities aimed at restoring ecosystems, combating climate change, and improving community livelihoods.", status: "Ongoing" },
+        { title: "Creating Green Jobs", desc: "The organization is actively creating green employment opportunities for youth and communities through environmental projects, sustainable practices, and climate-friendly economic activities.", status: "Active" }
       ]
     },
     {
-      dept: "Education Support",
-      icon: <Book />,
-      color: "#8338ec",
-      activities: [
-        { title: "School Infrastructure Support", desc: "Renovating classrooms and providing essential furniture for rural schools.", status: "Continuous" },
-        { title: "Learning Materials Drive", desc: "Distributing textbooks, stationery, and uniforms to underprivileged children.", status: "Seasonal" },
-        { title: "Teacher Capacity Building", desc: "Workshops on inclusive education and pupil-centered learning.", status: "Ongoing" }
-      ]
-    },
-    {
-      dept: "Disaster Resilience",
+      dept: "Pending Project",
       icon: <Zap />,
-      color: "#fb5607",
+      color: "#e63946",
       activities: [
-        { title: "Early Warning Systems", desc: "Community-led climate monitoring and disaster alert training.", status: "Active" },
-        { title: "Emergency Response Kits", desc: "Maintaining readiness with essential medical and relief supplies.", status: "Standing Group" },
-        { title: "Community Resilience Training", desc: "Workshops on disaster risk reduction and environmental safety.", status: "Quarterly" }
+        { title: "National Stakeholders Dialogue for Institutional Solar", desc: "Green Belt is preparing to organize a national stakeholders dialogue to promote institutional solar energy adoption. The dialogue will bring together government agencies, private sector players, development partners, and civil society to discuss policies, partnerships, and strategies for expanding solar energy use in institutions.", status: "Pending" }
       ]
     }
   ];
@@ -80,7 +46,7 @@ const ProjectsPage = () => {
             Our <span style={{ color: 'var(--secondary)' }}>Projects</span>
           </h1>
           <p style={{ maxWidth: '700px', margin: '0 auto', color: 'var(--gray-800)' }}>
-            Holistic solutions for empowerment and resilience across Uganda.
+            Green Belt Projects Update (2025–2026)
           </p>
         </div>
       </section>
