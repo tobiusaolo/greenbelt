@@ -18,13 +18,16 @@ const BlogPostPage = () => {
 
   const fetchPost = async () => {
     try {
-      const response = await fetch(`${API_URL}/${id}`);
-      if (!response.ok) throw new Error('Post not found');
-      const data = await response.json();
+      const resp = await fetch(`${API_URL}/${id}`);
+      if (!resp.ok) {
+        if (resp.status === 404) throw new Error('Article not found in database');
+        throw new Error(`Server Error: ${resp.status}`);
+      }
+      const data = await resp.json();
       setPost(data);
-    } catch (error) {
-      console.error('Error fetching post:', error);
-      setError(true);
+    } catch (err) {
+      console.error('Error fetching post:', err);
+      setError(err.message || 'Network Error or CORS failure');
     } finally {
       setLoading(false);
     }
@@ -35,17 +38,25 @@ const BlogPostPage = () => {
       <div style={{ minHeight: '80vh', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: '1.5rem' }}>
         <div style={{ width: '40px', height: '40px', border: '3px solid var(--gray-200)', borderTopColor: 'var(--primary)', borderRadius: '50%', animation: 'spin 1s linear infinite' }} />
         <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
-        <p style={{ color: 'var(--gray-600)', fontWeight: 500 }}>Preparing editorial...</p>
+        <p style={{ color: 'var(--gray-600)', fontWeight: 500 }}>Accessing GreenBelt Archives...</p>
       </div>
     );
   }
 
   if (error || !post) {
     return (
-      <div style={{ padding: '10rem 2rem', textAlign: 'center' }}>
-        <h2 style={{ fontSize: '3rem', marginBottom: '1.5rem' }}>Document Not Found</h2>
-        <p style={{ color: 'var(--gray-600)', marginBottom: '2rem' }}>The requested article has been moved or removed from our archives.</p>
-        <Link to="/blog" className="btn btn-primary">Browse All Articles</Link>
+      <div style={{ padding: '10rem 2rem', textAlign: 'center', maxWidth: '600px', margin: '0 auto' }}>
+        <h2 style={{ fontSize: '3rem', marginBottom: '1.5rem', color: 'var(--primary)' }}>Document Issue</h2>
+        <p style={{ color: 'var(--gray-600)', marginBottom: '1rem' }}>
+          We encountered an issue retrieving this article.
+        </p>
+        <div style={{ background: '#f5f5f5', padding: '1rem', borderRadius: '8px', marginBottom: '2rem', fontSize: '0.85rem', color: '#666', fontFamily: 'monospace' }}>
+          Error: {error || 'Post data represents null'}
+        </div>
+        <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
+          <button onClick={() => window.location.reload()} className="btn btn-outline">Retry Connection</button>
+          <Link to="/blog" className="btn btn-primary">Archives Home</Link>
+        </div>
       </div>
     );
   }
