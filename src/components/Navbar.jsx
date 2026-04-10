@@ -16,7 +16,7 @@ const Navbar = () => {
   }, []);
 
   const location = useLocation();
-  const isLightPage = ['/gallery', '/team', '/projects'].includes(location.pathname);
+  const isLightPage = ['/gallery', '/team', '/projects', '/blog'].includes(location.pathname) || location.pathname.startsWith('/blog/');
 
   const navLinks = [
     { name: 'Home', href: '/' },
@@ -25,6 +25,7 @@ const Navbar = () => {
     { name: 'Projects', href: '/projects' },
     { name: 'Team', href: '/team' },
     { name: 'Gallery', href: '/gallery' },
+    { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' },
   ];
 
